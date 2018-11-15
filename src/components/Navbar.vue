@@ -41,5 +41,22 @@ export default {
 }
 </script>
 
-<style >
+<style>
+.navbar-item {
+   cursor: pointer;
+}
+.navbar-item img {
+  max-height: 100%;
+}
+.navbar-brand, .navbar-tabs {
+  height: 100%;
+}
+.input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+  border-color: #3273dc;
+  box-shadow: none;
+}
+.input, .control.has-icons-left .select select {
+  padding-left: 2.25em;
+  border-radius: 0;
+}
 </style>
