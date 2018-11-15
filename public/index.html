@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" class="has-navbar-fixed-top" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>appstore</title>
+    <script defer="" src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
     <noscript>
@@ -14,4 +15,31 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    function toggleSideMenu(){
+      document.getElementById("aside").classList.toggle("show-aside");
+      document.getElementById("bg-aside").classList.toggle("show-bg-aside");
+      document.getElementsByTagName("html")[0].classList.toggle("disable-y-scroll");
+    };
+    $('.owl-carousel').owlCarousel({
+          stagePadding: 30,
+          loop:true,
+          margin:10,
+          nav:false,
+          dots: false,
+          autoplay:true,
+          autoplayTimeout:4000,
+          autoplayHoverPause:true,
+          responsive:{
+              0:{
+                  items:1,
+                  stagePadding:0,
+                  dots: true
+              },
+              1000:{
+                  items:2
+              }
+          }
+      })
+  </script>
 </html>
